@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loading…</title>
+    <style>
+      html {
+        overflow-y: scroll;
+      }
+      body {
+        margin: 0;
+      }
+      #page {
+        display: block;
+      }
+      #page image {
+        pointer-events: none;
+      }
+      #page rect {
+        fill: transparent;
+        cursor: pointer;
+      }
+      #status {
+        position: fixed;
+        top: 8px;
+        right: 8px;
+        padding: 4px 8px;
+        font: 12px system-ui, sans-serif;
+        color: #fff;
+        background: #000a;
+        border-radius: 4px;
+      }
+      #status:empty {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <svg id="page" xmlns="http://www.w3.org/2000/svg" width="0" height="0"></svg>
+    <div id="loader"></div>
+    <output id="status"></output>
+    <script type="module" src="./viewer.ts"></script>
+  </body>
+</html>
